@@ -52,8 +52,8 @@ RUN apt-get update && apt-get install  -y \
 # We assume this docker file is invoked with root at the top of linux-sgx repo, see shell scripts for example.
 WORKDIR /linux-sgx
 COPY . .
-
 RUN ./download_prebuilt.sh
+RUN cp external/toolset/* /usr/bin/
 
 RUN make sdk_install_pkg
 

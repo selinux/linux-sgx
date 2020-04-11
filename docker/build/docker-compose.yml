@@ -39,6 +39,7 @@ services:
       - /dev/isgx
     volumes:
       - /tmp/aesmd:/var/run/aesmd
+      - ../../SampleCode:/SampleCode
     stdin_open: true
     tty: true
     environment:
@@ -53,6 +54,7 @@ services:
       - /dev/isgx
     volumes:
       - /tmp/aesmd:/var/run/aesmd
+      - ../../SampleCode:/SampleCode
     stdin_open: true
     tty: true
     environment:
