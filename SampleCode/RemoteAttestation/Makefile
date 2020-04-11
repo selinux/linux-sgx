@@ -120,7 +120,7 @@ App_Name := app
 ServiceProvider_Cpp_Files := service_provider/ecp.cpp service_provider/network_ra.cpp service_provider/service_provider.cpp service_provider/ias_ra.cpp 
 ServiceProvider_Include_Paths := -I$(SGX_SDK)/include -I$(SGX_SDK)/include/tlibc -I$(SGX_SDK)/include/libcxx -Isample_libcrypto
 
-ServiceProvider_C_Flags := -fPIC -Wno-attributes -I$(SGX_SDK)/include -Isample_libcrypto
+ServiceProvider_C_Flags := -fPIC -Wno-attributes -I$(SGX_SDK)/include -I./sample_libcrypto
 ServiceProvider_Cpp_Flags := $(ServiceProvider_C_Flags)
 ServiceProvider_Link_Flags :=  -shared -L$(SGX_LIBRARY_PATH) -lsample_libcrypto -Lsample_libcrypto
 
